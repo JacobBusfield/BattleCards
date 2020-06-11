@@ -30,6 +30,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
     <v-content>
       <router-view></router-view>
     </v-content>
