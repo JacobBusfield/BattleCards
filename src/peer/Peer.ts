@@ -22,6 +22,8 @@ export default class Peer {
     });
 
     this.peer.on('connection', (connection) => {
+      console.log('I have a connection to:');
+      console.log(connection);
       this.addConnection(connection);
       this.send();
     });

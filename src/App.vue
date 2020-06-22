@@ -66,6 +66,8 @@
         if (isConnectPath) {
           if (id) {
             console.log("I should connect to: " + id)
+            console.log("this:")
+            console.log(this)
             this.$store.commit('connect', id)
           }
           this.$router.push("/")
