@@ -6,7 +6,7 @@
   </Page>
 </template>
 
-<script lang="ts">
+<script>
   import Page from '@/components/Page.vue';
 
   export default {
