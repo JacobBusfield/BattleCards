@@ -22,7 +22,7 @@
   </Page>
 </template>
 
-<script lang="ts">
+<script>
   // @ is an alias to /src
   import Page from '@/components/Page.vue';
 
