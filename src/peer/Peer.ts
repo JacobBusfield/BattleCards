@@ -30,7 +30,10 @@ export default class Peer {
   }
 
   public connect(id: string) {
+    console.log('peer connecting to: ' + id);
     this.addConnection(this.peer.connect(id));
+    console.log('connections:');
+    console.log(this.connections);
   }
 
   public getID() {

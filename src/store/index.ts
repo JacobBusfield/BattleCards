@@ -14,6 +14,7 @@ export default new Vuex.Store({
       state.messages.push(message);
     },
     connect(state, connectionID: string) {
+      console.log('store connecting to: ' + connectionID);
       state.peer.connect(connectionID);
     },
   },
