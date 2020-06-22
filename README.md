@@ -12,6 +12,13 @@ npm install
 npm run serve
 ```
 
+### Run peerjs server locally for development
+
+```
+npm install peer -g
+peerjs --port 9000 --key peerjs --path /myapp
+```
+
 ### Compiles and minifies for production
 
 ```

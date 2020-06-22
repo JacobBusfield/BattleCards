@@ -55,5 +55,22 @@
         },
       ],
     }),
+    mounted() {
+      this.connectRedirect()
+    },
+    methods: {
+      connectRedirect() {
+        let path = this.$route.fullPath
+        let isConnectPath = path.split("/")[1] === "connect"
+        let id = path.split("/")[2]
+        if (isConnectPath) {
+          if (id) {
+            console.log("I should connect to: " + id)
+            this.$store.commit('connect', id)
+          }
+          this.$router.push("/")
+        }
+      }
+    }
   });
 </script>
