@@ -25,6 +25,8 @@ export default class Peer {
       console.log('I have a connection to:');
       console.log(connection);
       this.addConnection(connection);
+      console.log('connections:');
+      console.log(this.connections);
       this.send();
     });
   }
@@ -41,6 +43,7 @@ export default class Peer {
   }
 
   public send() {
+    console.log('trying to send message...');
     this.connections.forEach((connection) => {
       connection.send('hello this is message I am sending!!');
     });
@@ -51,6 +54,8 @@ export default class Peer {
 
   private addConnection(connection: any) {
     connection.on('data', (data) => {
+      console.log('message recieved');
+      console.log(data);
       store.commit('message', data);
     });
 
